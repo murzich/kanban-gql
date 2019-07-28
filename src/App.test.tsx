@@ -12,5 +12,5 @@ it('renders without crashing', () => {
 it('contain the link - test on working the testing-library', () => {
   const { getByText } = render(<App />);
 
-  expect(getByText('Learn React')).toBeDefined();
+  expect(getByText('Learn React!')).toBeDefined();
 });
