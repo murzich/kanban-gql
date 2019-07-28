@@ -9,7 +9,9 @@ workflows:
   heroku_deploy:
     jobs:
       - build
-      - deploy
+      - deploy:
+          requires:
+            - build
 jobs:
   deploy:
     executor: heroku/default # Uses the basic buildpack-deps image, which has the prerequisites for installing heroku's CLI.
