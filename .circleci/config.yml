@@ -50,7 +50,9 @@ jobs:
             - ./node_modules
       - run: #run eslint check
           name: eslint
-          command: yarn eslint --ext .js,.jsx,.ts,.tsx ./src/ -f junit -o ./reports/eslint.xml
+          command: |
+            mkdir ./reports
+            yarn eslint --ext .js,.jsx,.ts,.tsx ./src/ -f junit -o ./reports/eslint.xml
           when: always
       - store_test_results:
           path: ~/reports
