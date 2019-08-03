@@ -1,3 +1,8 @@
-import React from 'react'
+import React from "react";
+import PropTypes from "prop-types";
 
-export default () => null;
+const IssueCard = () => {
+  return <div data-testid="issueCard" />;
+};
+
+export default IssueCard;
