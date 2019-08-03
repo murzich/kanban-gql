@@ -1,7 +1,7 @@
-import { Card } from "@blueprintjs/core";
-import React from "react";
+import { Card } from '@blueprintjs/core';
+import React from 'react';
 
-const IssueCard = () => {
+const IssueCard: React.FC = () => {
   return <Card data-testid="issueCard" />;
 };
 
