@@ -1,4 +1,4 @@
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, getByText } from '@testing-library/react';
 import React from 'react';
 import IssueCard from '../IssueCard';
 
@@ -25,5 +25,13 @@ describe('IssueCard', () => {
     const { getByText } = render(<IssueCard summary={issueSummary} />);
 
     expect(getByText(issueSummary)).toBeDefined();
+  });
+
+  it('exposes an Issue description', () => {
+    const issueDescription = 'Test issues description';
+
+    const { getByText } = render(<IssueCard description={issueDescription} />);
+
+    expect(getByText(issueDescription)).toBeDefined();
   });
 });
