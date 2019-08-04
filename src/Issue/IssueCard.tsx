@@ -6,16 +6,17 @@ type IssueProps = {
   id?: string; // TODO: change to required?
   // Issue summary or title
   summary?: string;
+  // Issue description, may be hidden
+  description?: string;
 };
 
-const IssueCard: React.FC<IssueProps> = ({ id, summary }) => (
+const IssueCard: React.FC<IssueProps> = ({ id, summary, description }) => (
   <Card role="article" interactive elevation={Elevation.TWO}>
     <header>
       <p className={Classes.HEADING}>{id}</p>
       <H2>{summary}</H2>
     </header>
-    {/* TODO: remove temp text */}
-    <div>Temp text</div>
+    <div>{description}</div>
   </Card>
 );
 
