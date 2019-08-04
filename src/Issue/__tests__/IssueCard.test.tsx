@@ -4,8 +4,8 @@ import IssueCard from '../IssueCard';
 
 describe('IssueCard', () => {
   it('should be rendered', () => {
-    const { getByTestId } = render(<IssueCard />);
+    const { getByRole } = render(<IssueCard />);
 
-    expect(getByTestId('issueCard')).toBeDefined();
+    expect(getByRole('article')).toBeDefined();
   });
 });
