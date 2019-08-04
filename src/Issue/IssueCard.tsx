@@ -1,4 +1,4 @@
-import { Card, Elevation } from '@blueprintjs/core';
+import { Card, Classes, Elevation, H2 } from '@blueprintjs/core';
 import React from 'react';
 
 type IssueProps = {
@@ -10,8 +10,10 @@ type IssueProps = {
 
 const IssueCard: React.FC<IssueProps> = ({ id, summary }) => (
   <Card role="article" interactive elevation={Elevation.TWO}>
-    <h2>{summary}</h2>
-    <h3>{id}</h3>
+    <header>
+      <p className={Classes.HEADING}>{id}</p>
+      <H2>{summary}</H2>
+    </header>
     {/* TODO: remove temp text */}
     <div>Temp text</div>
   </Card>

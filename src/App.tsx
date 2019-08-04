@@ -7,12 +7,10 @@ const App: React.FC = () => {
   return (
     <div className={styles.root}>
       <Navbar>
-        <Navbar.Group>
-          Kanban GraphQL TDD
-        </Navbar.Group>
+        <Navbar.Group>Kanban GraphQL TDD</Navbar.Group>
       </Navbar>
       <main className={styles.content}>
-        <IssueCard id="TEMP-123" />
+        <IssueCard id="TEMP-123" summary="Temp summary" />
       </main>
     </div>
   );
