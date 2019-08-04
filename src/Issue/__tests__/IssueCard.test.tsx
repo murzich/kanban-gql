@@ -13,8 +13,16 @@ describe('IssueCard', () => {
 
   it('exposes an Issue ID', () => {
     const issueId = 'TEST-123';
-    const { getByText} = render(<IssueCard id={issueId} />);
+    const { getByText } = render(<IssueCard id={issueId} />);
 
     expect(getByText(issueId)).toBeDefined;
-  })
+  });
+
+  it('exposes an Issue Summary', () => {
+    const issueSummary = 'Test Summary';
+
+    const { getByText } = render(<IssueCard summary={issueSummary} />);
+
+    expect(getByText(issueSummary)).toBeDefined;
+  });
 });
