@@ -2,6 +2,7 @@ import { Navbar } from '@blueprintjs/core';
 import React from 'react';
 import styles from './App.module.scss';
 import IssueCard from './Issue/IssueCard';
+import IssueList from './Issue/IssueList';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           summary="Temp summary"
           description="Temporary description text"
         />
+        <IssueList />
       </main>
     </div>
   );
