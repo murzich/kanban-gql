@@ -1,12 +1,16 @@
 import { Classes } from '@blueprintjs/core';
 import React from 'react';
-import IssueCard from './IssueCard';
+import IssueCard, { IssueProps } from './IssueCard';
 
-const IssueList: React.FC = () => (
+type IssueListProps = {
+  issues?: IssueProps[];
+};
+
+const IssueList: React.FC<IssueListProps> = ({ issues = [] }) => (
   <ul className={Classes.LIST_UNSTYLED}>
-    <IssueCard />
-    <IssueCard />
-    <IssueCard />
+    {issues.map((issue, i) => (
+      <IssueCard key={issue.id} {...issue} />
+    ))}
   </ul>
 );
 
