@@ -12,8 +12,9 @@ describe('IssueCard', () => {
   });
 
   it('exposes an Issue ID', () => {
-    const { getByText} = render(<IssueCard />);
+    const issueId = 'TEST-123';
+    const { getByText} = render(<IssueCard id={issueId} />);
 
-    expect(getByText('TEST-123')).toBeDefined;
+    expect(getByText(issueId)).toBeDefined;
   })
 });

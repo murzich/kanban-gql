@@ -12,7 +12,7 @@ const App: React.FC = () => {
         </Navbar.Group>
       </Navbar>
       <main className={styles.content}>
-        <IssueCard />
+        <IssueCard id="TEMP-123" />
       </main>
     </div>
   );
