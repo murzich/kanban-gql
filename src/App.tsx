@@ -10,7 +10,11 @@ const App: React.FC = () => {
         <Navbar.Group>Kanban GraphQL TDD</Navbar.Group>
       </Navbar>
       <main className={styles.content}>
-        <IssueCard id="TEMP-123" summary="Temp summary" />
+        <IssueCard
+          id="TEMP-123"
+          summary="Temp summary"
+          description="Temporary description text"
+        />
       </main>
     </div>
   );
