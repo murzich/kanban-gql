@@ -1,4 +1,5 @@
-import { cleanup, render } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import { cleanup, render, RenderResult } from '@testing-library/react';
 import React from 'react';
 import IssueList from '../IssueList';
 
@@ -11,7 +12,7 @@ describe('IssueList', () => {
     expect(getByRole('list')).toBeDefined();
   });
 
-  it('displays passed Issue items data', () => {
+  describe('displays passed Issue items data', () => {
     const issues = [
       {
         id: 'TEST-1',
@@ -35,12 +36,26 @@ describe('IssueList', () => {
       },
     ];
 
-    const { getByText } = render(<IssueList issues={issues} />);
+    let container: RenderResult;
+    let renderedIssues: HTMLElement[];
 
-    issues.forEach((issue) => {
-      Object.values(issue).map((text) => {
-        expect(getByText(text)).toBeDefined();
-      })
-    })
+    beforeEach(() => {
+      container = render(<IssueList issues={issues} />);
+      renderedIssues = container.getAllByRole('article');
+    });
+
+    it('with same count', () => {
+      expect(container.getByRole('list').childElementCount).toBe(issues.length);
+
+      expect(renderedIssues.length).toBe(issues.length);
+    });
+
+    it('in the same order', () => {
+      issues.forEach((issue, i) => {
+        Object.values(issue).map(text => {
+          expect(renderedIssues[i]).toContainHTML(container.getByText(text).outerHTML);
+        });
+      });
+    });
   });
 });
