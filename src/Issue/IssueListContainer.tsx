@@ -1,5 +1,6 @@
 import React from 'react';
+import IssueList from './IssueList';
 
-const IssueListContainer = () => <div />;
+const IssueListContainer = () => <IssueList />;
 
 export default IssueListContainer;
