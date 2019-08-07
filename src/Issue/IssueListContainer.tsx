@@ -1,6 +1,8 @@
 import React from 'react';
-import IssueList from './IssueList';
+import IssueList, { IssueListProps } from './IssueList';
 
-const IssueListContainer = () => <IssueList />;
+const IssueListContainer: React.FC = () => {
+  return <IssueList />;
+};
 
 export default IssueListContainer;

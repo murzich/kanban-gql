@@ -2,7 +2,7 @@ import { Classes } from '@blueprintjs/core';
 import React from 'react';
 import IssueCard, { IssueProps } from './IssueCard';
 
-type IssueListProps = {
+export type IssueListProps = {
   issues?: IssueProps[];
 };
 
