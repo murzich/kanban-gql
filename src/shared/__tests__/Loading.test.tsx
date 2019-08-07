@@ -9,4 +9,10 @@ describe('Loading', () => {
 
     expect(getByRole('figure')).toHaveAttribute('aria-label', 'Loading…');
   });
+
+  it('should match snapshot', () => {
+    const { asFragment } = render(<Loading />);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
