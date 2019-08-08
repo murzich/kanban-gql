@@ -11,7 +11,9 @@ workflows:
       - build:
           filters:
             branches:
-              only: feature/issue-card
+              only: 
+                - master
+                - dev
       - deploy:
           requires:
             - build
