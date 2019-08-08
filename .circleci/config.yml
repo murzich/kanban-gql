@@ -11,9 +11,7 @@ workflows:
       - build:
           filters:
             branches:
-              only: 
-                - master
-                - dev
+              only: master, dev
       - deploy:
           requires:
             - build
