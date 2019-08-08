@@ -8,7 +8,10 @@ orbs:
 workflows:
   heroku_deploy:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              only: feature/issue-card
       - deploy:
           requires:
             - build
