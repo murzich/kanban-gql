@@ -4,8 +4,10 @@ import ColumnItem from '../ColumnItem';
 
 describe('ColumnItem', () => {
   test('should has title', () => {
-    const { getByText } = render(<ColumnItem />);
+    const stubTitle = 'Column title';
 
-    expect(getByText('Column title')).toBeDefined();
+    const { getByText } = render(<ColumnItem title={stubTitle} />);
+
+    expect(getByText(stubTitle)).toBeDefined();
   });
 });
