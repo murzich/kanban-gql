@@ -13,16 +13,30 @@ describe('ColumnItem', () => {
     expect(getByText(stubTitle)).toBeDefined();
   });
 
-  test('should display passed Issue cards', () => {
+  test('should display passed Issue cards list as children', () => {
     const mockedIssues = [
-      { id: 1, summary: 'test summary', description: 'test description' },
+      {
+        id: 'TEST-1',
+        summary: 'test summary',
+        description: 'test description',
+      },
+      {
+        id: 'TEST-2',
+        summary: 'test summary',
+        description: 'test description',
+      },
+      {
+        id: 'TEST-3',
+        summary: 'test summary',
+        description: 'test description',
+      },
     ];
-    const { getByRole } = render(
+    const { getAllByRole } = render(
       <ColumnItem title="Test column">
         <IssueList issues={mockedIssues} />
       </ColumnItem>,
     );
 
-    expect(getByRole('article')).toBeDefined();
+    expect(getAllByRole('article')).toHaveLength(mockedIssues.length);
   });
 });

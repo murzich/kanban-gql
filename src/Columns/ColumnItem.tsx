@@ -1,14 +1,15 @@
+import { Card, H2 } from '@blueprintjs/core';
 import React from 'react';
-import { H2, Card } from '@blueprintjs/core';
 
 type Props = {
-    title: string;
-    children?: never;
-}
+  title: string;
+  children?: React.ReactNode;
+};
 
-const ColumnItem: React.FC<Props> = ({ title }) => (
+const ColumnItem: React.FC<Props> = ({ children, title }) => (
   <Card>
     <H2>{title}</H2>
+    {children}
   </Card>
 );
 
