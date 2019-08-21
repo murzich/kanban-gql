@@ -25,9 +25,9 @@ const App: React.FC = () => {
             summary="Temp summary"
             description="Temporary description text"
           />
-          <IssueList />
-          <IssueListContainer />
-          <ColumnItem title="test" />
+          <ColumnItem title="test">
+            <IssueListContainer />
+          </ColumnItem>
         </main>
       </div>
     </ApolloProvider>
