@@ -23,27 +23,24 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "docz:dev": "docz dev --typescript",
+    "docz:build": "docz build --typescript",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
     "@apollo/react-testing": "^3.0.1",
     "@testing-library/jest-dom": "^4.0.0",
     "@testing-library/react": "^9.1.1",
-    "identity-obj-proxy": "^3.0.0"
-  }
+    "docz": "^2.0.0-rc.1",
+    "identity-obj-proxy": "^3.0.0",
+    "scheduler": "^0.15.0"
+  },
+  "browserslist": [
+    "last 1 chrome version",
+    "last 1 firefox version",
+    "last 1 safari version"
+  ]
 }

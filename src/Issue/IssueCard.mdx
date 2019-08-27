@@ -1,0 +1,23 @@
+---
+name: "Hello world"
+menu: "Compoenents"
+id: "issue-card"
+route: /
+---
+
+import { Playground, Props } from 'docz';
+import IssueCard from './IssueCard';
+
+# Hello world
+
+<Props of={IssueCard} />
+
+Hello, I'm a mdx file!
+
+<Playground>
+    <IssueCard id="testing" summary="Title" description="I'm a description" />
+</Playground>
+
+<IssueCard id="testing" />
+
+test this 
