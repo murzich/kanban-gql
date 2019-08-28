@@ -3,8 +3,12 @@ import React from 'react';
 import styles from './IssueCard.module.scss';
 
 export type IssueProps = {
-  /** Issue unique id like "TEST-123" */
-  id?: string; // TODO: change to required?
+  /** 
+   * Issue unique id like "TEST-123".
+   * 
+   * TODO: change to required?
+   */
+  id?: string;
   /** Issue summary or title */
   summary?: string;
   /** Issue description, may be hidden */

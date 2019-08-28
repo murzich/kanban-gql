@@ -1,23 +1,27 @@
 ---
-name: "Hello world"
-menu: "Compoenents"
-id: "issue-card"
-route: /
+name: IssueCard
+menu: Components
 ---
 
 import { Playground, Props } from 'docz';
-import IssueCard from './IssueCard';
+import IssueCard from './IssueCard.tsx';
 
-# Hello world
+# IssueCard
+
+## Properties
 
 <Props of={IssueCard} />
 
+## Description
+
 Hello, I'm a mdx file!
 
+## Showcase
+
 <Playground>
-    <IssueCard id="testing" summary="Title" description="I'm a description" />
+    <IssueCard
+        id="TEST-123"
+        summary="search for test"
+        description="ready for something"
+    />
 </Playground>
-
-<IssueCard id="testing" />
-
-test this 
