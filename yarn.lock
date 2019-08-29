@@ -4524,10 +4524,10 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-docz-core@2.0.0-rc.3:
-  version "2.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/docz-core/-/docz-core-2.0.0-rc.3.tgz#518ed2cf3873a499c88d4e8a3144308937e68126"
-  integrity sha512-ZrdcoLiSmNV/zu6aW57b4wOS7U2DdJsIJoijGR2wX4ePbAwHrhG8Lo8xh6YQTy2URCiHCi6Vt6o02B9DeLAq4g==
+docz-core@2.0.0-rc.6:
+  version "2.0.0-rc.6"
+  resolved "https://registry.yarnpkg.com/docz-core/-/docz-core-2.0.0-rc.6.tgz#ed3221575e16edf9b2cf27456fdd1cce7d3f11aa"
+  integrity sha512-sAW9KQxpp/fQFGL3GMRJzO7fiqVoGVhqZ4Geq4UD5Ex1vHfKBwq8/5NRdRj0O0rmKXwmZ64ulvfaSqwF+2Z6/Q==
   dependencies:
     "@sindresorhus/slugify" "^0.9.1"
     chalk "^2.4.2"
@@ -4588,15 +4588,15 @@ docz-utils@^2.0.0-rc.1:
     unist-util-is "^3.0.0"
     unist-util-visit "^1.4.1"
 
-docz@^2.0.0-rc.5:
-  version "2.0.0-rc.5"
-  resolved "https://registry.yarnpkg.com/docz/-/docz-2.0.0-rc.5.tgz#01b76815d1077a9668c5deb363f3d1c891f15637"
-  integrity sha512-DpVEn+wgXM8hjU51nCHVbWykzJXzUV955OUh7XV8ZApnzdNZ6ghN1+t9LHdnF8DiCT205gDtMGGLDqVB9/hD5g==
+docz@^2.0.0-rc.8:
+  version "2.0.0-rc.8"
+  resolved "https://registry.yarnpkg.com/docz/-/docz-2.0.0-rc.8.tgz#03575de419cca118a152be48a6217c2606c26839"
+  integrity sha512-1hhta/mN0DAI/0ryp/q2Ssn77TKBi5rf7jxQwmLoQAecy7BzNYEfNe7PFSkSlSPCHihngyvROhUrmPwsSqDgcA==
   dependencies:
     "@mdx-js/react" "^1.0.27"
     array-sort "^1.0.0"
     capitalize "^2.0.0"
-    docz-core "2.0.0-rc.3"
+    docz-core "2.0.0-rc.6"
     fast-deep-equal "^2.0.1"
     gatsby "^2.13.27"
     lodash "^4.17.14"
@@ -6516,6 +6516,13 @@ graphql@^14.5.3:
   version "14.5.3"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.5.3.tgz#e025851cc413e153220f4edbbb25d49f55104fa0"
   integrity sha512-W8A8nt9BsMg0ZK2qA3DJIVU6muWhxZRYLTmc+5XGwzWzVdUdPVlAAg5hTBjiTISEnzsKL/onasu6vl3kgGTbYg==
+  dependencies:
+    iterall "^1.2.2"
+
+graphql@^14.5.4:
+  version "14.5.4"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.5.4.tgz#b33fe957854e90c10d4c07c7d26b6c8e9f159a13"
+  integrity sha512-dPLvHoxy5m9FrkqWczPPRnH0X80CyvRE6e7Fa5AWEqEAzg9LpxHvKh24po/482E6VWHigOkAmb4xCp6P9yT9gw==
   dependencies:
     iterall "^1.2.2"
 
