@@ -72,6 +72,9 @@ typings/
 # production
 /build
 
+# documentation
+/.docz
+
 # misc
 .DS_Store
 .env.local

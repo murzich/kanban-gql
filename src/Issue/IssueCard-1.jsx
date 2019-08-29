@@ -2,20 +2,25 @@ import { Card, Classes, Elevation, H2 } from '@blueprintjs/core';
 import React from 'react';
 import styles from './IssueCard.module.scss';
 
-export type IssueProps = {
-  /** 
-   * Issue unique id like "TEST-123".
-   * 
-   * TODO: change to required?
-   */
-  id?: string;
+const stringProp = (props, propName, componentName) => {
+  if (typeof props[propName] !== "string") {
+    return new Error(
+      'Invalid prop `' + propName + '` supplied to' +
+      ' `' + componentName + '`. Validation failed.'
+    );
+  }
+},
+
+propTypes = {
+  /** Issue unique id like "TEST-123" */
+  id: stringProp,
   /** Issue summary or title */
-  summary?: string;
+  summary: stringProp,
   /** Issue description, may be hidden */
-  description?: string;
+  description: stringProp,
 };
 
-const IssueCard: React.FC<IssueProps> = ({ id, summary, description }) => (
+const IssueCard = ({ id, summary, description }) => (
   <Card
     role="article"
     interactive
@@ -29,5 +34,7 @@ const IssueCard: React.FC<IssueProps> = ({ id, summary, description }) => (
     <div>{description}</div>
   </Card>
 );
+
+IssueCard.propTypes = propTypes;
 
 export default IssueCard;
