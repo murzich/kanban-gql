@@ -15,6 +15,9 @@ export type IssueProps = {
   description?: string;
 };
 
+/**
+ * Issue component styled as card with ID, title and description.
+ */
 const IssueCard: React.FC<IssueProps> = ({ id, summary, description }) => (
   <Card
     role="article"
