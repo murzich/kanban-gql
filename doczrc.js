@@ -4,12 +4,14 @@ export default {
   typescript: true,
   title: 'GraphQL Kanban',
   menu: ['Getting Started', 'Components'],
+  // Docz plugin to handle sass & modules imported into App components.
   plugins: [
     css({
       preprocessor: 'sass',
       cssmodules: true,
     }),
   ],
+  // Added to apply blueprint styles to playground components.
   htmlContext: {
     head: {
       links: [
