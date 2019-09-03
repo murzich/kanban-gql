@@ -1,0 +1,22 @@
+@import "~@blueprintjs/core/lib/scss/variables";
+
+.root {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 100%;
+    background-color: $blue5;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.item {
+    flex: 0 0 20rem;
+    margin: 0.5rem;
+    max-height: 100%;
+    overflow: hidden;
+
+    &:last-child {
+        padding-inline-end: 0.5rem;
+    }
+}

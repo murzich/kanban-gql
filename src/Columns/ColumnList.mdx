@@ -5,6 +5,7 @@ menu: Components
 
 import { Playground, Props } from 'docz';
 import ColumnList from './ColumnList';
+import ColumnItem from './ColumnItem';
 
 # ColumnList
 
@@ -15,6 +16,13 @@ import ColumnList from './ColumnList';
 ## Playground
 
 <Playground>
-    <ColumnList title="ColumnList">
-    </ColumnList>
+    <div style={{ height: 600 }}>
+        <ColumnList>
+            <ColumnItem title="Column #1" />
+            <ColumnItem title="Column #2" />
+            <div style={{ height: 900, border: '1px solid red' }} />
+            <ColumnItem title="Column #3" />
+            <ColumnItem title="Column #4" />
+        </ColumnList>
+    </div>
 </Playground>
