@@ -6,6 +6,7 @@ menu: Components
 import { Playground, Props } from 'docz';
 import ColumnList from './ColumnList';
 import ColumnItem from './ColumnItem';
+import IssueList from '../Issue/IssueList';
 
 # ColumnList
 
@@ -16,13 +17,68 @@ import ColumnItem from './ColumnItem';
 ## Playground
 
 <Playground>
-    <div style={{ height: 600 }}>
-        <ColumnList>
-            <ColumnItem title="Column #1" />
-            <ColumnItem title="Column #2" />
-            <div style={{ height: 900, border: '1px solid red' }} />
-            <ColumnItem title="Column #3" />
-            <ColumnItem title="Column #4" />
-        </ColumnList>
-    </div>
+  <div style={{ height: 600 }}>
+    <ColumnList>
+      <ColumnItem title="Column #1">
+        <IssueList
+          issues={[
+            {
+              id: 'TEST-1',
+              summary: 'test summary',
+              description: 'test description',
+            },
+            {
+              id: 'TEST-2',
+              summary: 'test summary',
+              description: 'test description',
+            },
+            {
+              id: 'TEST-3',
+              summary: 'test summary',
+              description: 'test description',
+            },
+          ]}
+        />
+      </ColumnItem>
+      <ColumnItem title="Column #2" />
+      <div style={{ height: 900, border: '1px solid red' }} />
+      <ColumnItem title="Column #3">
+        <IssueList
+          issues={[
+            {
+              id: 'TEST-1',
+              summary: 'test summary',
+              description: 'test description',
+            },
+            {
+              id: 'TEST-2',
+              summary: 'test summary',
+              description: 'test description',
+            },
+            {
+              id: 'TEST-3',
+              summary: 'test summary',
+              description: 'test description',
+            },
+            {
+              id: 'TEST-4',
+              summary: 'test summary',
+              description: 'test description',
+            },
+            {
+              id: 'TEST-5',
+              summary: 'test summary',
+              description: 'test description',
+            },
+            {
+              id: 'TEST-6',
+              summary: 'test summary',
+              description: 'test description',
+            },
+          ]}
+        />
+        </ColumnItem>
+      <ColumnItem title="Column #4" />
+    </ColumnList>
+  </div>
 </Playground>
