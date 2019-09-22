@@ -16,23 +16,28 @@ import IssueList from '../Issue/IssueList';
 ## Playground
 
 <Playground>
-    <ColumnItem title="ColumnItem">
-        <IssueList issues={[
-            {
-                id: 'TEST-1',
-                summary: 'test summary',
-                description: 'test description',
-            },
-            {
-                id: 'TEST-2',
-                summary: 'test summary',
-                description: 'test description',
-            },
-            {
-                id: 'TEST-3',
-                summary: 'test summary',
-                description: 'test description',
-            },
-        ]} />
-    </ColumnItem>
+  <ColumnItem
+    title="ColumnItem"
+    onAddCard={event => alert('Add card button pressed')}
+  >
+    <IssueList
+      issues={[
+        {
+          id: 'TEST-1',
+          summary: 'test summary',
+          description: 'test description',
+        },
+        {
+          id: 'TEST-2',
+          summary: 'test summary',
+          description: 'test description',
+        },
+        {
+          id: 'TEST-3',
+          summary: 'test summary',
+          description: 'test description',
+        },
+      ]}
+    />
+  </ColumnItem>
 </Playground>
