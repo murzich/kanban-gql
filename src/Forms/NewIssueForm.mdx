@@ -19,5 +19,5 @@ Form component for creating new Issue.
 ## Showcase
 
 <Playground>
-  <NewIssueForm />
+  <NewIssueForm onSubmit={values => alert(JSON.stringify(values, null, 2))} />
 </Playground>
