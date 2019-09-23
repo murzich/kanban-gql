@@ -1,0 +1,43 @@
+---
+name: ColumnItem
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import ColumnItem from './ColumnItem';
+import IssueList from '../Issue/IssueList';
+
+# ColumnItem
+
+## Properties
+
+<Props of={ColumnItem} />
+
+## Playground
+
+<Playground>
+  <ColumnItem
+    title="ColumnItem"
+    onAddCard={event => alert('Add card button pressed')}
+  >
+    <IssueList
+      issues={[
+        {
+          id: 'TEST-1',
+          summary: 'test summary',
+          description: 'test description',
+        },
+        {
+          id: 'TEST-2',
+          summary: 'test summary',
+          description: 'test description',
+        },
+        {
+          id: 'TEST-3',
+          summary: 'test summary',
+          description: 'test description',
+        },
+      ]}
+    />
+  </ColumnItem>
+</Playground>
